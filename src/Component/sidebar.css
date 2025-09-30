@@ -1,0 +1,56 @@
+.mainSidebarContainer{
+    flex: 0.8; /* Mengambil ruang 4 kali lipat */
+    background-color: WHITE;
+    height: 100vh;
+}
+.liContainer{
+    display: flex;
+    align-items: center;
+}
+.ulContainer{
+    margin-top: 30px;
+}
+.menu{
+    display: flex;
+    color: rgb(92, 97, 101);
+    margin-left: -10px;
+}
+.adminContainer{
+    display: flex;
+    margin-top: -10px;
+
+}
+.adminText{
+    font-size: 20px;
+    margin-left: 40px;
+
+}
+.sidebarIcon{
+    width: 20px;
+    height: 20px;
+}
+.itemNames{
+    margin-left: 10px;
+    color: rgb(79, 81, 84);
+}
+.scheduleContainer{
+    display: flex;
+    margin-left: 30px;
+    padding: 10px;
+    background-color: rgb(227, 212, 212);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.scheduleTitle{
+    font-size: 14px;
+    color: rgb(79, 81, 84);
+    margin-right: 80px;
+}
+.mainScheduleContainer{
+    margin-top: 80px;
+    margin-right: 10px;
+}
+a, .customLink {
+  text-decoration: none;
+  color: inherit; /* biar ikut warna parent */
+}
