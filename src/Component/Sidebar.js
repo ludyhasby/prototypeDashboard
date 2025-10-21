@@ -1,37 +1,35 @@
 import React from 'react'
 import "./sidebar.css"
 import { FaHome, FaTasks, FaMoneyBillAlt } from "react-icons/fa";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate, NavLink } from "react-router-dom";
 import { GrUserWorker } from "react-icons/gr";
 import { GiProgression } from "react-icons/gi";
 
 export default function Sidebar() {
-  const handleClick = (e, path) => {
-    e.preventDefault();
-    window.location.href = path; // ganti halaman manual
-  };
   return (
     <div className='mainSidebarContainer'>
-      <div>
         <ul className='ulContainer'>
           <h4 className='menu'>Menu</h4>
-          <a href="/" onClick={(e) => handleClick(e, "/")}>
-            <li className='liContainer'>
-              <FaHome className='sidebarIcon' />
-              <p className='itemNames'>Home</p>
-            </li>
-          </a>
-          <a href="/teams" onClick={(e) => handleClick(e, "/teams")}>
-            <li className='liContainer'>
-              <GrUserWorker className='sidebarIcon'/>
-              <p className='itemNames'>Teams</p>
-            </li>
-          </a>
-          <a href="/progress" onClick={(e) => handleClick(e, "/progress")}>
-            <li className='liContainer'>
-              <GiProgression className='sidebarIcon'/>
-              <p className='itemNames'>Progress [Private]</p>
-            </li>
-          </a>
+          <nav>
+            <Link to="/" style={{ margin: 3 }}>
+              <li className='liContainer'>
+                <FaHome className='sidebarIcon' />
+                <p className='itemNames'>Home</p>
+              </li>
+            </Link>
+            <Link to="/teams" style={{ margin: 3 }}>
+              <li className='liContainer'>
+                <GrUserWorker className='sidebarIcon'/>
+                <p className='itemNames'>Teams</p>
+              </li>            
+            </Link>
+            <Link to="/progress" style={{ margin: 3}}>
+              <li className='liContainer'>
+                <GiProgression className='sidebarIcon'/>
+                <p className='itemNames'>Progress [Private]</p>
+              </li>
+            </Link>
+          </nav>
         </ul>
         <div className='mainScheduleContainer'> 
           <h4 className='scheduleTitle'>Schedule Events</h4>
@@ -48,7 +46,6 @@ export default function Sidebar() {
             <label htmlFor='Bestie Wedding'>Learning DevOps </label>
           </div>
         </div>
-      </div>
     </div>
   )
 }
